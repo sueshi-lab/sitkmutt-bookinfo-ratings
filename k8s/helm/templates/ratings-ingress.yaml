@@ -15,7 +15,7 @@ spec:
   - host: {{ .Values.ratings.host }}
     http:
       paths:
-      - path: /student23/ratings(/|$)(.*)
+      - path: {{ .Values.ingress.path }}
         pathType: Prefix
         backend:
           service:
